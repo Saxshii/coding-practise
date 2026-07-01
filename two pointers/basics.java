@@ -79,7 +79,8 @@ public class basics {
         moveZeroOnes(zerone);
         System.out.println("");
 
-        int square[] = {-4, -1, 0 , 3, 10};
+        // int square[] = {-4, -1, 0 , 3, 10};
+        int square[] = {-4,-3,-2,-1,0};
         sortedSquare(square);
     }
 }
