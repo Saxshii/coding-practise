@@ -99,15 +99,46 @@ public class day2 {
     //     }
     // }
 
+    // SWAP - HELPING FNC
+    public static void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    // DUTCH NATIONAL FLAG
+    public static void dutchNationalFlag(int[] arr){
+        int n = arr.length;
+        int low = 0, mid = 0, high = n-1;
+        while(mid<= high){
+            if(arr[mid] == 1){
+                mid++;
+            }else if( arr[mid] == 0){
+                swap(arr, mid, low);
+                low++; mid++;
+            }else{
+                swap(arr, mid, high);
+                high--;
+            }
+        }
+        print(arr);
+    }
+
     public static void main(String[] args) {
-        int triplet[] = {-1, 0, 1, 2, -1, -4};
-        System.out.println( tripletSum(triplet) );
+        // int triplet[] = {-1, 0, 1, 2, -1, -4};
+        // System.out.println( tripletSum(triplet) );
 
-        int closest[] = {-1,2,1,-4};
-        System.out.println( closestSum(closest, 1) );
+        // int closest[] = {-1,2,1,-4};
+        // System.out.println( closestSum(closest, 1) );
 
-        int smaller[] = {-2,0,1,3};
+        // int smaller[] = {-2,0,1,3};
         // smallerSum(smaller, 1);
+
+        // int test[] = {0,1,5,3,4,2};
+        // swap(test, 2, 5);
+
+        int number[] = {2,0,2,1,1,0};
+        dutchNationalFlag(number);
 
 
     }
