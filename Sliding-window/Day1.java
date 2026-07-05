@@ -1,5 +1,5 @@
 class Day1{
-    // // print int arr
+    // print int arr
     public static void print(int arr[]){
         int n = arr.length;
         for(int i =0; i<n; i++){ 
@@ -62,6 +62,6 @@ class Day1{
         System.out.println(maximumAvg(nums, 4));
 
         int arr[] = {1,2,4,4};
-         System.out.println( minimumLength(arr, 5) );
+        System.out.println( minimumLength(arr, 5) );
     }
 }
